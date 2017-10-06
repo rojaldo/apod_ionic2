@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    
+    <ion-label>Select a date</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY MM DD" [(ngModel)]="myDate" (ionChange)='doRequest()'></ion-datetime>
+  </ion-item>
+  <ion-card>
+      <img [src]="imageURL"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{title}}
+        </ion-card-title>
+        <p>
+          {{explanation}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
